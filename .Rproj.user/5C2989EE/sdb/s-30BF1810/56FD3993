@@ -1,0 +1,17 @@
+{
+    "contents" : "<br>  \n* In this app you can play visualize different bivariate joint distributions of discrete variables.\n<br>  \n* Choose two variables and turn or tip the plot so getter a better feeling for the distribution.\n<br>  \n* The **preloaded default dataset** is a subset of the Swiss European Social Survey (ESS6e02). It contains the following variables...\n    1. Trust in police = {0-10} = {not trust at all, ... , complete trust}\n    1. Trust in politicians = {0-10} = {not trust at all, ... , complete trust}\n    1. Political interest = {0-3} = {not at all interested, ..., very interested}\n    1. Voted last election = {0, 1} = {no, yes}\n    1. Party voted last election = {8 different parties}\n    1. Citizenship = {0, 1} =  {no, yes}\n    1. Happyness = {0-10} = {extremely unhappy, ..., extremely happy}\n    1. Health = {0-4} = {very bad, ..., very good}\n    1. Age = {16-96} \n    1. Household income (10 categories) = {0-9}\n",
+    "created" : 1446853758689.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2214981451",
+    "id" : "56FD3993",
+    "lastKnownWriteTime" : 1446853762,
+    "path" : "C:/Users/paul/Google Drive/Packages/discrete_joint_distributions/instruction.md",
+    "project_path" : "instruction.md",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "markdown"
+}
