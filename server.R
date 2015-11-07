@@ -1,7 +1,23 @@
 
+# Counter
+# A server parameters
+SP <- list()
+# Record the number of poeple who have used the app
+#    since initiation on the server
+SP$npers <- 0
+
 
 shinyServer(  function(input, output){
 
+  # Counter
+  # shinyServer is Started up every time the domain is called.
+  # Use <<- to assign to the global server environment.
+  SP$npers <<- SP$npers + 1
+  output$hits <- renderText({
+    paste0("Pageviews: " , SP$npers)
+  })
+  
+  
   ess.ch <-
     read.csv(
       "http://paulcbauer.eu/wp-content/uploads/2015/11/ess_ch.csv", header = TRUE, sep =

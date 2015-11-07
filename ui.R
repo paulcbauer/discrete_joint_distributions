@@ -12,6 +12,7 @@ ess.ch  <- read.table("http://www.paulcbauer.eu/wp-content/uploads/2014/11/ess_c
   # br() element to introduce extra vertical spacing
   sidebarLayout(
     sidebarPanel(
+      h5(textOutput("hits")),
       selectInput("var1", label = "Y-Variable:",
                   choices = c("trust.police", "trust.politicians", "political.interest", 
                               "voted.last.election", "party.voted.last", "swiss.citizen", 

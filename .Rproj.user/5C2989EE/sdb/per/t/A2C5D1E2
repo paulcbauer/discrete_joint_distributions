@@ -1,0 +1,17 @@
+{
+    "contents" : "\n# Counter\n# A server parameters\nSP <- list()\n# Record the number of poeple who have used the app\n#    since initiation on the server\nSP$npers <- 0\n\n\nshinyServer(  function(input, output){\n\n  # Counter\n  # shinyServer is Started up every time the domain is called.\n  # Use <<- to assign to the global server environment.\n  SP$npers <<- SP$npers + 1\n  output$hits <- renderText({\n    paste0(\"Pageviews: \" , SP$npers)\n  })\n  \n  \n  ess.ch <-\n    read.csv(\n      \"http://paulcbauer.eu/wp-content/uploads/2015/11/ess_ch.csv\", header = TRUE, sep =\n        \",\"\n    )\n  \n \noutput$plot <- renderPlot({\n    forgraph <- as.matrix(prop.table(table(ess.ch[,input$var1], ess.ch[,input$var2])))\n    class(forgraph)\n    library(lattice)\n    library(latticeExtra)\n    cloud(forgraph, panel.3d.cloud = panel.3dbars,\n          xbase = 0.4, ybase = 0.4, zlim = c(0, max(forgraph)),\n          scales = list(arrows = FALSE, just = \"right\"), zlab=NULL, xlab = input$var1, ylab =   input$var2,\n          col.facet = level.colors(forgraph, at = do.breaks(range(forgraph), 20),\n                                   col.regions = gray.colors,\n                                   colors = TRUE),\n          colorkey = list(col = gray.colors, at = do.breaks(range(forgraph), 20)),\n          screen = list(z = input$z.scale, x = input$x.scale))\n  })\n\n\noutput$frequency <- renderPrint({\n  abs.freq.table <- table(ess.ch[,input$var1], ess.ch[,input$var2])\n  abs.freq.table  \n})\n\n\noutput$relfrequency <- renderPrint({\n  abs.freq.table <- table(ess.ch[,input$var1], ess.ch[,input$var2])\n  abs.freq.table  \n  rel.freq.table <- round(prop.table(table(ess.ch[,input$var1], ess.ch[,input$var2])),2)\n  rel.freq.table\n})\n\n\n\n})\n",
+    "created" : 1446856995448.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3130577950",
+    "id" : "A2C5D1E2",
+    "lastKnownWriteTime" : 1446857037,
+    "path" : "C:/Users/paul/Google Drive/Packages/discrete_joint_distributions/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
