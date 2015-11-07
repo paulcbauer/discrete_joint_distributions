@@ -24,8 +24,19 @@ ess.ch  <- read.table("http://www.paulcbauer.eu/wp-content/uploads/2014/11/ess_c
       sliderInput("x.scale", label = "Turn plot:",
                   min = -100, max = 100, value = -67, step = 1),   
       sliderInput("z.scale", label = "Tipp plot:",
-                  min = -100, max = 100, value = -31, step = 1)
+                  min = -100, max = 100, value = -31, step = 1),
 
+      br(), br(),
+      
+      div("Shiny app by", 
+          a(href="http://paulcbauer.eu/",target="_blank", 
+            "Paul C. Bauer"),align="right", style = "font-size: 8pt"),
+    
+      
+      div("Shiny/R code:",
+          a(href="https://github.com/paulbauer/discrete_joint_distributions",
+            target="_blank","GitHub"),align="right", style = "font-size: 8pt")
+      
   ),
 
  mainPanel(
