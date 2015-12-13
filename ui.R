@@ -4,12 +4,10 @@ ess.ch  <- read.table("http://www.paulcbauer.eu/wp-content/uploads/2014/11/ess_c
   
   shinyUI(fluidPage(
     
-  # Application title
+
   titlePanel("Discrete joint distributions"),
   
-  # Sidebar with controls to select the random distribution type
-  # and number of observations to generate. Note the use of the
-  # br() element to introduce extra vertical spacing
+
   sidebarLayout(
     sidebarPanel(
       
