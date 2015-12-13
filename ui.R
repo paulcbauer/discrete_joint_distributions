@@ -12,7 +12,7 @@ ess.ch  <- read.table("http://www.paulcbauer.eu/wp-content/uploads/2014/11/ess_c
   # br() element to introduce extra vertical spacing
   sidebarLayout(
     sidebarPanel(
-      h5(textOutput("hits")),
+      
       selectInput("var1", label = "Y-Variable:",
                   choices = c("trust.police", "trust.politicians", "political.interest", 
                               "voted.last.election", "party.voted.last", "swiss.citizen", 
@@ -21,9 +21,9 @@ ess.ch  <- read.table("http://www.paulcbauer.eu/wp-content/uploads/2014/11/ess_c
                   choices = c("trust.police", "trust.politicians", "political.interest", 
                               "voted.last.election", "party.voted.last", "swiss.citizen", 
                               "happy", "health", "age", "hh.income"), selected = "political.interest"), 
-      sliderInput("x.scale", label = "Turn plot:",
+      sliderInput("x.scale", label = "Tip plot:",
                   min = -100, max = 100, value = -67, step = 1),   
-      sliderInput("z.scale", label = "Tipp plot:",
+      sliderInput("z.scale", label = "Turn plot:",
                   min = -100, max = 100, value = -31, step = 1),
 
       br(), br(),

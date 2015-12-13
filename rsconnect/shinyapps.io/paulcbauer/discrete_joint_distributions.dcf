@@ -1,8 +1,8 @@
 name: discrete_joint_distributions
 account: paulcbauer
 server: shinyapps.io
-bundleId: 306018
-url: https://paulcbauer.shinyapps.io/Discrete_joint_distributions
-when: 1446899774.19644
+bundleId: 330091
+url: https://paulcbauer.shinyapps.io/discrete_joint_distributions
+when: 1450037165.30926
 asMultiple: FALSE
 asStatic: FALSE
